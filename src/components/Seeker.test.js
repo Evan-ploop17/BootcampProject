@@ -3,7 +3,6 @@ import { prettyDOM } from '@testing-library/react';
 import Seeker from './Seeker';
 
 
-
 test('The word exist', () => {
     render(<Seeker />);
     const wordElement = screen.getByTestId('seeker')
@@ -13,8 +12,10 @@ test('The word exist', () => {
 });
 
 test('Clicking submit button', () => {
-    render(<Seeker />);
-    const btn = screen.getByDisplayValue('buscar...');
+    const getDataToSearch = () => {
+        return true
+       }
+    render(<Seeker getDataToSearch={getDataToSearch}/>);
+    const btn = screen.getByTestId('send-form');
     fireEvent.click(btn);
-    
 });

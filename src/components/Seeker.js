@@ -26,7 +26,7 @@ class Seeker extends Component{
                         </label>
                         <label className="form-group col-md-4" htmlFor="send-form" aria-describedby="info-button">
                             <p className="d-none" id="info-button">Boton para buscar la imagen</p>
-                            <input id="send-form" type="submit" className="btn btn-lg btn-danger btn-block" value="buscar..." />
+                            <input id="send-form" data-testid="send-form" type="submit" className="btn btn-lg btn-danger btn-block" value="buscar..." />
                         </label>
                     </FocusScope>
                 </div>
