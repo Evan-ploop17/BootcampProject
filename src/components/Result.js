@@ -10,13 +10,10 @@ class Result extends Component {
         console.log(images)
         return (
             <React.Fragment>
-
                 <Pages
                     previousPage={this.props.previousPage}
                     nextPage={this.props.nextPage}
                 />
-
-                
                 <div className="col-12 row">
                     {/* Tiene que ser con parentesis, las llaves no funcionan en ese arrow function */}
                     {images.map(pic => (
@@ -26,13 +23,10 @@ class Result extends Component {
                         />
                     ))}
                 </div> 
-                
-                
                 <Pages
                     previousPage={this.props.previousPage}
                     nextPage={this.props.nextPage}
                 />
-                
             </React.Fragment>
         )
     }

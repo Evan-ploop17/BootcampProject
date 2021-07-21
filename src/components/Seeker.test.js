@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { prettyDOM } from '@testing-library/react';
 import Seeker from './Seeker';
 
-const mockHandler = jest.fn();
+
 
 test('The word exist', () => {
     render(<Seeker />);
@@ -15,6 +15,6 @@ test('The word exist', () => {
 test('Clicking submit button', () => {
     render(<Seeker />);
     const btn = screen.getByDisplayValue('buscar...');
-    console.log(prettyDOM(btn));
-    //fireEvent.click(btn);
+    fireEvent.click(btn);
+    
 });

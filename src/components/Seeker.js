@@ -10,7 +10,6 @@ class Seeker extends Component{
     handlerData = (e) =>{
         e.preventDefault()
         // Manera de obtener el valor del texto
-        //console.log("palabra " + this.seekerRef.current.value)
         const wordToSearch = this.seekerRef.current.value
         // Así podemos enviar un valor del child al parent
         this.props.getDataToSearch(wordToSearch)
